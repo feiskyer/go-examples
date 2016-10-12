@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package main;
+
+service RemoteRuntime {
+  rpc ContainerLogs(ContainerLogsRequest) returns (stream ContanerLogsResponse) {}
+}
+
+message ContainerLogsRequest {
+  string container = 1;
+  int32 type = 2;
+  string filter = 3;
+}
+
+message ContanerLogsResponse {
+  string log = 1;
+  string error = 2;
+  string stdout = 3;
+}
+

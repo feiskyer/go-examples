@@ -1,0 +1,1 @@
+PS the reason you need MS_REC (which I now remember after reading this) is because /proc has other things mounted inside it (e.g. /proc/sys/fs/binfmt_misc) and if you don't recursively mount those as well you could be revealing stuff that had been intentionally hidden via mount-over.
