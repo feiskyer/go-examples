@@ -4,9 +4,11 @@
 
 package main
 
-import "encoding/json"
-import "fmt"
-import "os"
+import (
+	"encoding/json"
+	"fmt"
+	"os"
+)
 
 // We'll use these two structs to demonstrate encoding and
 // decoding of custom types below.
@@ -25,7 +27,6 @@ type Res3 struct {
 }
 
 func main() {
-
 	// First we'll look at encoding basic data types to
 	// JSON strings. Here are some examples for atomic
 	// values.
