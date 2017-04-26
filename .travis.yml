@@ -13,8 +13,8 @@ go:
 go_import_path: github.com/feiskyer/go-examples
 
 install:
-  - sudo networking/cnitool/install-cni.sh
+  - sudo -E networking/cnitool/install-cni.sh
 
 script:
-  - sudo networking/cnitool/test-cnitool.sh
+  - sudo -E networking/cnitool/test-cnitool.sh
 
