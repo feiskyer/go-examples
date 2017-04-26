@@ -1,6 +1,6 @@
 # Go examples
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/feiskyer/go-examples)](https://goreportcard.com/report/github.com/feiskyer/go-examples)
+[![Build Status](https://travis-ci.org/feiskyer/go-examples.svg?branch=master)](https://travis-ci.org/feiskyer/go-examples) [![Go Report Card](https://goreportcard.com/badge/github.com/feiskyer/go-examples)](https://goreportcard.com/report/github.com/feiskyer/go-examples)
 
 Various go examples based on [gobyexample](https://github.com/mmcgrana/gobyexample) with extensions.
 
