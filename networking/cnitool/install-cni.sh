@@ -3,7 +3,8 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-go get -d github.com/containernetworking/cni/...
+mkdir -p $GOPATH/src/github.com/containernetworking/cni
+git clone https://github.com/containernetworking/cni.git $GOPATH/src/github.com/containernetworking/cni
 cd $GOPATH/src/github.com/containernetworking/cni
 
 sudo mkdir -p /etc/cni/net.d
@@ -32,12 +33,12 @@ sudo sh -c 'cat >/etc/cni/net.d/netlist.conflist <<-EOF
     "plugins": [
         {
             "type": "bridge",
-            "bridge": "cni0",
+            "bridge": "cni10",
             "isGateway": true,
             "ipMasq": true,
             "ipam": {
                 "type": "host-local",
-                "subnet": "10.10.0.0/16",
+                "subnet": "10.20.0.0/16",
                 "routes": [
                     { "dst": "0.0.0.0/0"  }
                 ]
