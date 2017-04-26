@@ -30,16 +30,18 @@ sudo sh -c 'cat >/etc/cni/net.d/netlist.conflist <<-EOF
     "cniVersion": "0.3.1",
     "name": "netlist",
     "plugins": [
-        "type": "bridge",
-        "bridge": "cni0",
-        "isGateway": true,
-        "ipMasq": true,
-        "ipam": {
-            "type": "host-local",
-            "subnet": "10.10.0.0/16",
-            "routes": [
-                { "dst": "0.0.0.0/0"  }
-            ]
+        {
+            "type": "bridge",
+            "bridge": "cni0",
+            "isGateway": true,
+            "ipMasq": true,
+            "ipam": {
+                "type": "host-local",
+                "subnet": "10.10.0.0/16",
+                "routes": [
+                    { "dst": "0.0.0.0/0"  }
+                ]
+            }
         }
     ]
 }
