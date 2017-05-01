@@ -18,7 +18,7 @@ sudo sh -c 'cat >/etc/cni/net.d/10-mynet.conf <<-EOF
     "ipMasq": true,
     "ipam": {
         "type": "host-local",
-        "subnet": "10.10.0.0/16",
+        "subnet": "10.100.0.0/16",
         "routes": [
             { "dst": "0.0.0.0/0"  }
         ]
@@ -33,12 +33,12 @@ sudo sh -c 'cat >/etc/cni/net.d/netlist.conflist <<-EOF
     "plugins": [
         {
             "type": "bridge",
-            "bridge": "cni10",
+            "bridge": "cni1",
             "isGateway": true,
             "ipMasq": true,
             "ipam": {
                 "type": "host-local",
-                "subnet": "10.20.0.0/16",
+                "subnet": "10.200.0.0/16",
                 "routes": [
                     { "dst": "0.0.0.0/0"  }
                 ]
