@@ -43,8 +43,8 @@ func RunCommand(cmd string, args ...string) ([]string, error) {
 func main() {
 	output, err := RunCommand("ls", "/tmp")
 	if err != nil {
-		fmt.Println("Error %v", err)
+		fmt.Printf("Error %v\n", err)
 	} else {
-		fmt.Println("%s", strings.Join(output, "\n"))
+		fmt.Printf("%s", strings.Join(output, "\n"))
 	}
 }

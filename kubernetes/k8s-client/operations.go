@@ -56,11 +56,11 @@ func (op *deployOperation) Do(c *client.Client) {
 				},
 				Spec: api.PodSpec{
 					Containers: []api.Container{
-						api.Container{
+						{
 							Name:  appName,
 							Image: op.image,
 							Ports: []api.ContainerPort{
-								api.ContainerPort{ContainerPort: port, Protocol: api.ProtocolTCP},
+								{ContainerPort: port, Protocol: api.ProtocolTCP},
 							},
 							Resources: api.ResourceRequirements{
 								Limits: api.ResourceList{

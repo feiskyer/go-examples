@@ -1,14 +1,15 @@
 package main
+
 import (
-	"time"
-	"fmt"
-	"net/rpc"
-	"log"
 	"bufio"
 	"encoding/gob"
+	"fmt"
 	"io"
+	"log"
 	"net"
+	"net/rpc"
 	"strconv"
+	"time"
 )
 
 type Worker struct {
@@ -121,9 +122,8 @@ func main() {
 			mapChan <- i
 		}(i)
 	}
-	for i := 0; i<N; i++ {
+	for i := 0; i < N; i++ {
 		<-mapChan
 	}
-
 
 }

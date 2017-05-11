@@ -40,7 +40,7 @@ func CreatePod() error {
 		},
 		Spec: api.PodSpec{
 			Containers: []api.Container{
-				api.Container{
+				{
 					Name:  "nginx",
 					Image: "nginx",
 				},

@@ -41,7 +41,7 @@ func CreateNetwork() error {
 		Spec: api.NetworkSpec{
 			TenantID: "test-tenant",
 			Subnets: map[string]api.Subnet{
-				"subnet1": api.Subnet{
+				"subnet1": {
 					CIDR:    "192.176.0.0/24",
 					Gateway: "192.176.0.1",
 				},

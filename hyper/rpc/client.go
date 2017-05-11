@@ -102,7 +102,7 @@ func (c *HyperClient) GetContainerInfo(container string) (*types.ContainerInfo, 
 }
 
 // GetContainerLogs gets container log by container name or id
-func (c *HyperClient) GetContainerLogs(container string, out io.Writer) (error) {
+func (c *HyperClient) GetContainerLogs(container string, out io.Writer) error {
 	req := types.ContainerLogsRequest{
 		Container:  container,
 		Follow:     true,
@@ -129,11 +129,11 @@ func (c *HyperClient) GetContainerLogs(container string, out io.Writer) (error) 
 			return err
 		}
 		if len(res.Log) > 0 {
-			
-		_, err = out.Write([]byte(res.Log))
-		if err != nil {
-			break
-		}
+
+			_, err = out.Write([]byte(res.Log))
+			if err != nil {
+				break
+			}
 		}
 	}
 

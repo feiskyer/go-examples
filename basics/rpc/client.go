@@ -1,12 +1,13 @@
 package main
+
 import (
-	"fmt"
-	"net/rpc"
-	"encoding/gob"
 	"bufio"
-	"time"
-	"net"
+	"encoding/gob"
+	"fmt"
 	"io"
+	"net"
+	"net/rpc"
+	"time"
 )
 
 type gobClientCodec struct {
