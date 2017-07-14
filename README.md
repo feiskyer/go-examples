@@ -16,7 +16,7 @@ Various go examples based on [gobyexample](https://github.com/mmcgrana/gobyexamp
 ## Golang install
 
 ```sh
-curl -sL https://storage.googleapis.com/golang/go1.8.1.linux-amd64.tar.gz | tar -C /usr/local -zxf -
+curl -sL https://storage.googleapis.com/golang/go1.8.3.linux-amd64.tar.gz | tar -C /usr/local -zxf -
 export GOPATH='/go'
 export PATH=$GOPATH/bin:/usr/local/go/bin/:$PATH
 ```
@@ -27,4 +27,10 @@ export PATH=$GOPATH/bin:/usr/local/go/bin/:$PATH
 * dep: `go get -u github.com/golang/dep/...`
 * govendor: `go get -u github.com/kardianos/govendor`
 * gometalinter: `go get -u github.com/alecthomas/gometalinter && gometalinter --install`
+* [go-pry](https://github.com/d4l3k/go-pry): An interactive REPL for Go, `go get github.com/d4l3k/go-pry`.
+* [gophernotes](https://github.com/gopherdata/gophernotes): Go in Notebooks.
+  - `go get golang.org/x/tools/cmd/goimports`
+  - `go get -tags zmq_4_x github.com/gopherds/gophernotes`
+  - `mkdir -p ~/Library/Jupyter/kernels/gophernotes`
+  - `cp -r $GOPATH/src/github.com/gopherds/gophernotes/kernel/* ~/Library/Jupyter/kernels/gophernotes`
 
